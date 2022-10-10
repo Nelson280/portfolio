@@ -21,11 +21,11 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: gray;
+  background: #0d0d0d;
 }
 
 html::-webkit-scrollbar-thumb {
-  background: gold;
+  background: crimson;
   border-radius: 5rem;
 }
 
@@ -55,7 +55,7 @@ section {
   display: inline-block;
   margin-top: 1rem;
   border-radius: 5rem;
-  background: gold;
+  background: crimson;
   padding: .7rem;
   font-size: 1.7rem;
   color: #fff;
@@ -69,7 +69,7 @@ section {
   font-size: 1.7rem;
   text-align: center;
   background: #fff;
-  color: gold;
+  color: crimson;
   border-radius: 50%;
   margin-left: 1rem;
   -webkit-transition: .2s linear;
@@ -81,8 +81,10 @@ section {
 }
 
 .navbar {
-  position: static;
-  left: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,34 +92,33 @@ section {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  
 }
 
 .navbar a {
   padding: 2rem;
   font-size: 2rem;
-  background: goldenrod;
-  -webkit-box-fle: 1;
+  background: #1a1a1a;
+  -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: black;
+  color: #fff;
   text-align: center;
   -webkit-transition: .2s linear;
   transition: .2s linear;
 }
 
 .navbar a i {
-  color: marron;
+  color: crimson;
   padding-right: .5rem;
 }
 
 .navbar a:hover {
-  background: lightgray;
- 
+  background: crimson;
+  padding-bottom: 6rem;
 }
 
 .navbar a:hover i {
-  color:pink;
+  color: #fff;
 }
 
 .home {
@@ -129,10 +130,8 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 5rem;
+  gap: 4rem;
   min-height: calc(100vh - 6.5rem);
-  background-color:slategray;
-
 }
 
 .home .image {
@@ -140,14 +139,12 @@ section {
       -ms-flex: 1 1 42rem;
           flex: 1 1 42rem;
   text-align: center;
-
 }
 
 .home .image img {
   height: 50rem;
   width: 50rem;
-  border-radius: 50%;
-  box-shadow: 0px 0px 18px 25px gold;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
 .home .content {
@@ -156,16 +153,16 @@ section {
           flex: 1 1 42rem;
 }
 
-.home .content h1 {
-  color: gold;
+.home .content h3 {
+  color: #fff;
   font-size: 4rem;
-  padding-bottom: .6rem;
+  padding-bottom: .5rem;
 }
 
 .home .content span {
-  font-size: 4rem;
-  color: black;
-  padding: .3rem 0;
+  font-size: 3rem;
+  color: crimson;
+  padding: .5rem 0;
   display: block;
 }
 
@@ -186,19 +183,20 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
- 
 }
-.about 
-{
-   background-color: slategray;
-}
+
 .about .row .info-container {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 42rem;
           flex: 1 1 42rem;
 }
 
-
+.about .row .info-container h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
 
 .about .row .info-container .box-container {
   padding: 1rem 0;
@@ -208,20 +206,6 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
-}
-.about .row .info-container .box-container h5
-{
-font-size: 3rem;
-  color: Gold;
-  text-transform: uppercase;
-  padding-bottom: 1rem;
-}
-.about .row .info-container .box-container p
-{
-font-size:2rem;
-  color: white;
-  text-transform: uppercase;
-  padding-bottom: 1rem;
 }
 
 .about .row .info-container .box-container .box {
@@ -238,8 +222,8 @@ font-size:2rem;
 }
 
 .about .row .info-container .box-container .box h3 span {
-  color: gold;
-  font-weight: 200;
+  color: #aaa;
+  font-weight: lighter;
 }
 
 .about .row .count-container {
@@ -339,7 +323,7 @@ font-size:2rem;
   line-height: 4.5rem;
   font-size: 1.7rem;
   border-radius: 50%;
-  background: gold;
+  background: crimson;
   color: #fff;
   text-align: center;
   position: absolute;
@@ -371,7 +355,6 @@ font-size:2rem;
 
 .portfolio {
   text-align: center;
-   background-color: slategray;
 }
 
 .portfolio .box-container {
@@ -381,7 +364,6 @@ font-size:2rem;
       grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
-   
 }
 
 .portfolio .box-container .box {
@@ -400,9 +382,6 @@ font-size:2rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-     border-radius: 25%   25%  25% 25%;
-     box-shadow: 5px 5px 5px 5px gold;
-
 }
 
 .portfolio .box-container .box .content {
@@ -430,7 +409,6 @@ font-size:2rem;
           transform: translateY(-100%);
   -webkit-transition: .2s linear;
   transition: .2s linear;
-
 }
 
 .portfolio .box-container .box .content h3 {
@@ -455,17 +433,13 @@ font-size:2rem;
 .portfolio .box-container .box .content a:hover {
   color: #fff;
 }
-.blogs
-{
-   background-color: slategray;
-}
+
 .blogs .box-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 1.5rem;
-   
 }
 
 .blogs .box-container .box {
@@ -533,55 +507,40 @@ font-size:2rem;
   color: #aaa;
   padding: 1rem 0;
   line-height: 2;
+}
 
-}
-.contact
-{
-  background-color: slategray;
-  flex-direction: column-reverse;
-  max-width: 2000px;
-  margin: 0 auto;
-  width: 100%;
- 
-}
 .contact .row {
-  width: 80%;
-  padding: 30px;
-  text-align: center;
-  border-radius: 30px 
-  padding: 30px;
-  margin: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 5px 5px 18px 5px gold;
-  transition: 0.3s ease box-shadow;
-  
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .contact .row .info-container {
-  width: 50rem;
-
+  width: 40rem;
 }
 
 .contact .row .info-container h1 {
   font-size: 3rem;
   text-transform: uppercase;
-  color:gold;
-  padding: 50;
-
+  color: #fff;
+  padding-bottom: 1rem;
 }
 
-.contact .row .info-container h6 {
-  font-size: 1.2rem;
+.contact .row .info-container p {
+  font-size: 1.5rem;
   line-height: 2;
-  color: black;
-  padding: 2rem 0;
+  color: #aaa;
+  padding: 1rem 0;
 }
 
 .contact .row .info-container .box-container {
-  padding:  0;
+  padding: 2rem 0;
 }
 
 .contact .row .info-container .box-container .box {
@@ -594,7 +553,7 @@ font-size:2rem;
 
 .contact .row .info-container .box-container .box i {
   font-size: 3rem;
-  color: gold;
+  color: crimson;
 }
 
 .contact .row .info-container .box-container .box h3 {
